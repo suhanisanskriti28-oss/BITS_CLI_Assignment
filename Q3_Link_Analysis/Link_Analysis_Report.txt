@@ -1,0 +1,31 @@
+Question 3 - Hard Link and Symbolic Link Analysis
+
+
+Original File
+-------------
+An original file named original.txt was created.
+
+
+Hard Link
+---------
+A hard link named hardlink.txt was created using the ln command. It shares the same inode as the original file.
+
+
+Symbolic Link
+-------------
+A symbolic link named symlink.txt was created using the ln -s command. It points to the original file using its pathname.
+
+
+Observation
+-----------
+Before deleting original.txt, both the hard link and symbolic link displayed the same content. After deleting original.txt, hardlink.txt continued to display the file contents successfully, while symlink.txt produced the error "No such file or directory" because it pointed to a file that no longer existed.
+
+
+Difference Between Hard Link and Symbolic Link
+----------------------------------------------
+Hard links share the same inode as the original file and remain accessible even if the original file is deleted. Symbolic links are references to the file path and become broken when the original file is removed.
+
+
+Conclusion
+----------
+This experiment demonstrated the practical difference between hard links and symbolic links. Hard links remain functional after deleting the original file, whereas symbolic links become unusable.

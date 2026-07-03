@@ -1,0 +1,30 @@
+Question 4 - Input/Output Redirection Investigation
+
+Input File
+----------
+A file named input.txt was created containing the text "Linux Command Line Interface Assignment".
+
+
+Output Redirection
+------------------
+The contents of input.txt were successfully redirected to output.txt using the (>) operator.
+
+
+Append Redirection
+------------------
+The text "This line was appended." was added to output.txt using the (>>) operator without overwriting the existing content.
+
+
+Error Redirection
+-----------------
+An invalid command (ls nonexistentfile) was executed, and the resulting error message was redirected to error.txt using the (2>) operator.
+
+
+Observation
+-----------
+The (>) operator redirects standard output to a file and overwrites its contents if it already exists. The (>>) operator appends new data to an existing file. The (2>) operator redirects standard error messages to a separate file.
+
+
+Conclusion
+----------
+The experiment successfully demonstrated output redirection, append redirection, and error redirection using Unix/Linux commands.

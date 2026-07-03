@@ -1,0 +1,36 @@
+Question 2 - Secure Project Workspace Setup
+
+Directory Structure Created
+---------------------------
+A new project workspace named Project_Files was created. Three files (plan.txt, documentation.txt, and notes.txt) were added to the workspace.
+
+
+File Permissions
+----------------
+Before modification:
+plan.txt had default permissions (-rw-r--r--).
+
+
+After modification:
+The permissions of plan.txt were changed to -rw-r----- (640), allowing read/write access to the owner and read access to the group.
+
+
+Ownership Details
+-----------------
+Owner: sanskritisuhani
+Group: staff
+
+
+Umask Value
+-----------
+022
+
+
+Explanation of Permission Protection
+-----------------------------------
+File permissions help protect sensitive project data by controlling who can read, write, or execute files. Using chmod 640 ensures that only the owner has write access while the group has read-only access.
+
+
+Conclusion
+----------
+The project workspace was successfully created. File permissions were modified, ownership was verified, and the system's default umask value was checked.

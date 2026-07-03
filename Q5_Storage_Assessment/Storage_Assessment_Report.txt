@@ -1,0 +1,32 @@
+Question 5 - Storage Health Assessment and Documentation
+
+Available Storage Devices
+-------------------------
+The system storage devices were identified using the diskutil list command.
+
+Mounted File Systems
+--------------------
+The mounted file systems were examined using the df -h command.
+
+Disk Usage Statistics
+---------------------
+Disk usage statistics were collected using the df -h command to determine available and used storage space.
+
+Inode Utilization
+-----------------
+The df -i command was used to check inode usage. The inode utilization is within normal limits.
+
+Storage Health Observations
+---------------------------
+The storage devices are mounted correctly, and sufficient free disk space is available. No abnormal storage utilization was observed.
+
+Recommendations
+---------------
+1. Regularly monitor disk usage.
+2. Remove unnecessary files to free storage space.
+3. Perform regular backups.
+4. Monitor inode usage to avoid file system limitations.
+
+Conclusion
+----------
+The storage resources were successfully assessed, and the overall storage health appears to be normal.
