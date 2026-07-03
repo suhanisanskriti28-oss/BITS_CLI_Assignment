@@ -1,32 +1,47 @@
-Question 5 - Storage Health Assessment and Documentation
+Question 5 – Storage Health Assessment and Documentation
 
 Available Storage Devices
--------------------------
+Command: diskutil list
 The system storage devices were identified using the diskutil list command.
 
-Mounted File Systems
---------------------
-The mounted file systems were examined using the df -h command.
+Explanation:
+The diskutil list command displayed all storage devices and their partitions connected to the system.
 
-Disk Usage Statistics
----------------------
-Disk usage statistics were collected using the df -h command to determine available and used storage space.
+
+
+Mounted File Systems and Disk Usage Statistics
+Command: df -h
+
+The mounted file systems and disk usage statistics were examined using the df -h command.
+
+Explanation:
+The df -h command displayed all mounted file systems along with their total, used, and available storage space in a human-readable format. The output helped evaluate the overall disk usage and available storage capacity.
+
+
+
 
 Inode Utilization
------------------
+Command: df -i
+
 The df -i command was used to check inode usage. The inode utilization is within normal limits.
 
+Explanation:
+The df -i command displayed inode usage statistics. The results showed that sufficient inodes were available and no filesystem limitations were observed.
+
+
+
 Storage Health Observations
----------------------------
+
 The storage devices are mounted correctly, and sufficient free disk space is available. No abnormal storage utilization was observed.
 
 Recommendations
----------------
-1. Regularly monitor disk usage.
-2. Remove unnecessary files to free storage space.
-3. Perform regular backups.
-4. Monitor inode usage to avoid file system limitations.
+1.⁠ ⁠Regularly monitor disk usage.
+2.⁠ ⁠Remove unnecessary files to free storage space.
+3.⁠ ⁠Perform regular backups.
+4.⁠ ⁠Monitor inode usage to avoid file system limitations.
+
+
 
 Conclusion
-----------
+
 The storage resources were successfully assessed, and the overall storage health appears to be normal.

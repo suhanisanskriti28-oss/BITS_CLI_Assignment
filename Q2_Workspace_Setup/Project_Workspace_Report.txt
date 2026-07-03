@@ -1,36 +1,63 @@
-Question 2 - Secure Project Workspace Setup
+Question 2 – Secure Project Workspace Setup
 
 Directory Structure Created
----------------------------
+Command: mkdir Project_Files
+
 A new project workspace named Project_Files was created. Three files (plan.txt, documentation.txt, and notes.txt) were added to the workspace.
+
+Command: touch plan.txt documentation.txt notes.txt
+Three files were created inside the workspace.
+
+Explanation:
+The mkdir command created the project directory, and the touch command created the required files inside it. This organized the workspace for the assignment.
+
 
 
 File Permissions
-----------------
+Command: ls -l
+
 Before modification:
+
 plan.txt had default permissions (-rw-r--r--).
 
+Command: chmod 640 plan.txt
 
 After modification:
+
 The permissions of plan.txt were changed to -rw-r----- (640), allowing read/write access to the owner and read access to the group.
+
+Explanation:
+The chmod 640 plan.txt command modified the file permissions to improve security. The ls -l command verified that the changes were successfully applied.
+
 
 
 Ownership Details
------------------
+Command: ls -l and stat plan.txt
+
+
 Owner: sanskritisuhani
+
 Group: staff
+
+Explanation:
+The ls -l and stat commands displayed the owner and group information of the file. The output confirmed that the file belonged to the user sanskritisuhani and the staff group.
+
 
 
 Umask Value
------------
+Command: umask
+
 022
 
+Explanation:
+The umask command displayed the system's default permission mask. It determines the default permissions assigned to newly created files and directories.
 
 Explanation of Permission Protection
------------------------------------
+
 File permissions help protect sensitive project data by controlling who can read, write, or execute files. Using chmod 640 ensures that only the owner has write access while the group has read-only access.
 
 
+
 Conclusion
-----------
+
 The project workspace was successfully created. File permissions were modified, ownership was verified, and the system's default umask value was checked.

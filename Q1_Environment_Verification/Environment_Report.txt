@@ -1,35 +1,62 @@
-Question 1 - Linux Environment Verification
+Question 1 – Linux Environment Verification
+
 
 Username
---------
+Command: whoami
 sanskritisuhani
+
+Explanation:
+The whoami command was used to display the username of the currently logged-in user. It confirmed that the active user account is sanskritisuhani.
 
 
 Groups
-------
+Command: groups
+
 staff everyone localaccounts _appserverusr admin _appserveradm _lpadmin com.apple.sharepoint.group.1 _appstore _lpoperator _developer _analyticsusers com.apple.access_ftp com.apple.access_screensharing-disabled com.apple.access_ssh com.apple.access_remote_ae
+
+Explanation:
+The groups command listed all groups associated with the current user. This verified the user's permissions and group memberships.
+
 
 
 Current Shell
--------------
+Command: echo $SHELL
 /bin/zsh
+
+Explanation:
+The echo $SHELL command displayed the default shell currently in use. The output confirmed that the shell is /bin/zsh.
+
 
 
 Current Working Directory
--------------------------
+Command: pwd
 /Users/sanskritisuhani/BITS_CLI_Assignment/Q1_Environment_Verification
+
+Explanation:
+The pwd command printed the present working directory. It verified that all commands were executed from the required assignment folder.
+
 
 
 Files and Directories
----------------------
+Command: ls -l
+
 The current directory contains the Environment_Report.txt file. The directory listing also displays file permissions, owner, group, file size, and modification date.
+
+Explanation:
+The ls -l command displayed a detailed list of files and directories. It verified the presence of the report file along with its permissions, ownership, and other file details.
+
 
 
 Network Connectivity Verification
----------------------------------
+Command: ping -c 4 google.com
+
 The ping command successfully transmitted 4 packets and received 4 packets with 0% packet loss. This confirms that the system has a stable internet connection.
+
+Explanation:
+The ping -c 4 google.com command tested internet connectivity by sending four packets to Google. All packets were received successfully without any packet loss.
+
 
 
 Conclusion
-----------
+
 The system environment was successfully verified. The user account, groups, shell, working directory, directory contents, and network connectivity were checked successfully using Unix/Linux commands.

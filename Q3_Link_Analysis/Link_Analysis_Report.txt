@@ -1,31 +1,70 @@
-Question 3 - Hard Link and Symbolic Link Analysis
+Question 3 – Hard Link and Symbolic Link Analysis
 
 
 Original File
--------------
+
+Command: echo "This is the original file." > original.txt
+
 An original file named original.txt was created.
+
+Explanation:
+The echo "..."> original.txt command created the original file and stored sample content that was used throughout the experiment.
+
 
 
 Hard Link
----------
+Command: ln original.txt hardlink.txt
+
 A hard link named hardlink.txt was created using the ln command. It shares the same inode as the original file.
+
+Explanation:
+The ln command created a hard link that shares the same inode as the original file. Both names refer to the same physical data on disk.
+
 
 
 Symbolic Link
--------------
+Command: ln -s original.txt symlink.txt
+
 A symbolic link named symlink.txt was created using the ln -s command. It points to the original file using its pathname.
+
+Inode Check
+Command: ls -li
+
+The ls -li command displayed the inode numbers of the files. It showed that original.txt and hardlink.txt shared the same inode, while symlink.txt had a different inode because it only stores the pathname of the original file.
+
+
+View Content
+
+Command: cat original.txt
+Command: cat hardlink.txt
+Command: cat symlink.txt
+
+Explanation:
+The cat commands displayed the contents of the original file, hard link, and symbolic link. This verified that all three referred to the same data before deleting the original file.
+
+
+Delete Original
+Command: rm original.txt
+
+Explanation:
+The rm command deleted original.txt to test how hard links and symbolic links behave when the original file is removed.
 
 
 Observation
------------
+
 Before deleting original.txt, both the hard link and symbolic link displayed the same content. After deleting original.txt, hardlink.txt continued to display the file contents successfully, while symlink.txt produced the error "No such file or directory" because it pointed to a file that no longer existed.
+
+Explanation:
+The cat command was used before and after deleting the original file to compare the behavior of both links. The observations clearly demonstrated the difference between hard links and symbolic links.
+
 
 
 Difference Between Hard Link and Symbolic Link
-----------------------------------------------
+
 Hard links share the same inode as the original file and remain accessible even if the original file is deleted. Symbolic links are references to the file path and become broken when the original file is removed.
 
 
+
 Conclusion
-----------
+
 This experiment demonstrated the practical difference between hard links and symbolic links. Hard links remain functional after deleting the original file, whereas symbolic links become unusable.
